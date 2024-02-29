@@ -12,10 +12,6 @@ import org.antlr.v4.runtime.Token;
 
 import java.util.List;
 
-/**
- *
- * @author gleiph
- */
 public class MeuVisitorJava extends JavaParserBaseVisitor<Object> {
 
     private boolean escopoAtributo = false;
@@ -89,6 +85,5 @@ public class MeuVisitorJava extends JavaParserBaseVisitor<Object> {
         // Continue visitando os filhos deste contexto
         return visitChildren(ctx);
     }
-
 
 }

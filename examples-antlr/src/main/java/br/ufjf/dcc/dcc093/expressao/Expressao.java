@@ -13,17 +13,14 @@ import com.github.javaparser.StaticJavaParser;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.comments.Comment;
 
-/**
- *
- * @author gleiph
- */
+
 public class Expressao {
 
     private static final boolean SHOW_TREE = true;
 
     public static void main(String[] args) throws IOException {
 
-            java("C:/Users/kleit/OneDrive/Documentos/ANTLR-Example/src/main/java/br/ufjf/dcc/dcc093/expressao/Expressao.java", false);
+            java("C:/Users/kleit/OneDrive/Documentos/java-paser/examples-antlr/src/main/java/br/ufjf/dcc/dcc093/expressao/Expressao.java", false);
     }
 
     /*comentario*/
@@ -31,12 +28,6 @@ public class Expressao {
 
         //Aqui tem comentario
         if (filePath.endsWith(".java")) {
-
-            /*
-            * deee
-            * */
-
-            // Teste
 
             CharStream charContent = CharStreams.fromFileName(filePath);
 
@@ -62,28 +53,4 @@ public class Expressao {
         }
     }
 
-    public static void javaPaser(String[] args) {
-
-
-
-    }
-
-    private static class CommentReportEntry {
-        private String type;
-        private String text;
-        private int lineNumber;
-        private boolean isOrphan;
-
-        CommentReportEntry(String type, String text, int lineNumber, boolean isOrphan) {
-            this.type = type;
-            this.text = text;
-            this.lineNumber = lineNumber;
-            this.isOrphan = isOrphan;
-        }
-
-        @Override
-        public String toString() {
-            return lineNumber + "|" + type + "|" + isOrphan + "|" + text.replaceAll("\\n","").trim();
-        }
-    }
 }
