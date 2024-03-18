@@ -13,24 +13,25 @@ import com.github.javaparser.StaticJavaParser;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.comments.Comment;
 
-
 public class Expressao {
 
     private static final boolean SHOW_TREE = true;
 
     public static void main(String[] args) throws IOException {
 
-            java("C:/Users/kleit/OneDrive/Documentos/java-paser/examples-antlr/src/main/java/br/ufjf/dcc/dcc093/expressao/Expressao.java", false);
+        java("C:/Users/kleit/OneDrive/Documentos/java-paser/examples-antlr/src/main/java/br/ufjf/dcc/dcc093/expressao/Expressao.java",
+                false);
     }
 
-    /*comentario*/
+    /* comentario */
     public static void java(String filePath, boolean printTree) throws IOException, OutOfMemoryError {
 
-        //Aqui tem comentario
+        // Aqui tem comentario
         if (filePath.endsWith(".java")) {
-
+            // comentarios para teste
             CharStream charContent = CharStreams.fromFileName(filePath);
 
+            // comentarios para teste
             JavaLexer lexer = new JavaLexer(charContent);
 
             CommonTokenStream tokens = new CommonTokenStream(lexer);
@@ -45,7 +46,7 @@ public class Expressao {
                 throw ex;
             }
             MeuVisitorJava visitor = new MeuVisitorJava();
-            
+
             visitor.visit(tree);
 
         } else {

@@ -9,10 +9,10 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 
+/*apeans um teste de comentarios */
 public class CommentReporterStarter {
 
-    private static final String FILE_PATH =
-            "src/main/java/org/javaparser/samples/ReversePolishNotation.java";
+    private static final String FILE_PATH = "src/main/java/org/javaparser/samples/ReversePolishNotation.java";
 
     public static void main(String[] args) throws Exception {
 
